@@ -5,10 +5,4 @@ import { Component } from "@angular/core";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  loadedSection = "recipe";
-
-  onNavigate(sectionSelected: string) {
-    this.loadedSection = sectionSelected;
-  }
-}
+export class AppComponent {}
