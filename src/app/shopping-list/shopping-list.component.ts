@@ -12,7 +12,6 @@ import { ShoppingListService } from "./shopping-list.service";
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
   shoppingListState: Observable<{ ingredients: Ingredient[] }>;
-  subscription: Subscription;
 
   constructor(
     private shoppingListService: ShoppingListService,
@@ -27,7 +26,5 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     this.shoppingListService.startedEditing.next(index);
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+  ngOnDestroy() {}
 }
