@@ -7,7 +7,6 @@ import {
 } from "@angular/common/http";
 import { map } from "rxjs/operators";
 
-import { AuthService } from "../auth/auth.service";
 import { RecipeService } from "../recipes/recipe.service";
 import { Recipe } from "../recipes/recipe.model";
 
@@ -15,8 +14,7 @@ import { Recipe } from "../recipes/recipe.model";
 export class DataStorageService {
   constructor(
     private httpClient: HttpClient,
-    private recipeService: RecipeService,
-    private authService: AuthService
+    private recipeService: RecipeService
   ) {}
 
   storeRecipes() {
