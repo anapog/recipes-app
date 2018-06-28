@@ -10,7 +10,6 @@
                 </li>
                 <li routerLinkActive="active">
                     <a routerLink="/shopping-list">Shopping list</a>
-
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -25,6 +24,7 @@
                 <li>
                     <a style="cursor: pointer;" (click)="logout()" *ngIf="(authState | async).authenticated">Log out</a>
                 </li>
+
                 <li class="dropdown" appDropdown *ngIf="(authState | async).authenticated">
                     <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage
                         <span class="caret"></span>
